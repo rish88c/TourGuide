@@ -1,0 +1,190 @@
+{%load static%}
+
+body{
+
+	background-image:url("/static/images/background.png");
+
+}
+
+.mapdiv{
+    width:28%;
+    margin-left:50%;
+
+}
+
+.mapdiv path {
+    fill: transparent;
+    stroke: black;
+    stroke-width:1px;
+    transition: fill 0.3s;
+}
+
+#region_Borivali:hover {
+                fill:#d40000 ;
+}
+
+#region_Kandivali:hover {
+                fill:#d40000 ;
+}
+
+#region_Goregaon:hover {
+                fill:#d40000 ;
+}
+
+#region_Mulund:hover {
+                fill:#d40000 ;
+}
+
+#region_Bhandup:hover {
+                fill:#d40000 ;
+}
+
+
+#region_Ghatkoper:hover {
+                fill:green ;
+}
+
+#region_Chembur:hover {
+                fill:green;
+}
+
+
+#region_Kurla:hover {
+                fill:#d40000;
+}
+
+#region_Colaba:hover {
+                fill:green  ;
+}
+
+#region_Khar-Santacruz:hover {
+                fill:#d40000 ;
+}
+
+
+#region_Sanhurst_Road:hover {
+                fill:#d40000 ;
+}
+
+#region_Bandra:hover {
+                fill:green;
+}
+
+
+#region_Marine_Line:hover {
+                fill:green ;
+}
+
+
+
+#region_Dadar:hover {
+                fill:#d40000 ;
+}
+
+#region_GrantRoad:hover {
+                fill:#d40000;
+}
+
+#region_Matunga:hover {
+                fill:#d40000 ;
+}
+
+#region_Byculla:hover {
+                fill:#d40000;
+}
+
+#region_Parel:hover {
+                fill:#d40000 ;
+}
+
+#region_Elphinstone:hover {
+                fill:#d40000 ;
+}
+
+/*.mapdiv:hover
+{
+    fill:#d40000 !important;
+}
+*/
+
+#region_Andheri_w_:hover {
+                fill:#d40000 ;
+                
+}
+
+#region_Andheri_e_:hover {
+                fill:#d40000 ;
+}
+
+
+
+/*.map_container{
+
+    display:flex;
+}*/
+
+/*.info{
+  position: absolute;
+  top: 50%;   right: 100%; 
+  transform: translateY(-50%);
+  width: 200px;
+  height: 100px;
+  background-color: blue;
+  padding: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1; 
+}
+*/
+/*
+.col-lg-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+
+}*/
+path:hover {
+  cursor: pointer; /* Change the cursor to a pointer when hovering over the path */
+}
+
+path:hover::before {
+  content: attr(title); /* Display the title as a tooltip */
+  background-color: #333;
+  color: #fff;
+  font-size: 12px;
+}
+
+/*#info-box {
+  position: absolute;
+  top: 50px;
+  right: 100%;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid black;
+  font-size: 14px;
+}
+*/
+
+.map_container {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 50%;
+    max-width: 100%;
+ height: 900px;
+ background-image:url(meth.png);
+ padding: 20px;
+}
+
+.infodiv {
+    display:"PLEASE SELECT A REGION";
+ max-width: 500px;
+ text-align: center;
+ margin: 200px auto;
+ margin-left:150px;
+ background-color: transparent;
+ border: 6px solid grey;
+padding: 10px;
+ color: #000;
+}
+.infodiv{ 
+   float: left;
+   width: 50%; /* or whatever width you want each div to be */
+}

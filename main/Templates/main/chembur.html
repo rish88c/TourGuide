@@ -1,0 +1,89 @@
+{%extends 'main/base.html'%}
+
+	{%block ref%}
+		{%load static%}
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Tourist Places in Mumbai" />
+		<link rel="shortcut icon" href="assets/icons/tourist.ico" />
+		<title>Tourist Places in Mumbai</title>
+
+		<style>
+			img{
+				padding: 0px;
+				width:250px;
+				height: 250px;
+				border-radius: 6px;
+				box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+			}
+			/* For mobile view of navbar and footer */
+			@media screen and (max-width: 600px) {
+				.navbar {
+					width: 110%;
+				}
+				.footer {
+					width: 110%;
+				}
+			}
+
+		</style>
+	{%endblock%}
+	{%block js%}
+			<script>
+			window.addEventListener
+			('scroll', function()
+				{
+					var nav = document.querySelector('nav');
+					nav.classList.add('opaque');
+				}
+			);
+			</script>
+	{%endblock%}
+	{%block content%}
+
+
+
+
+	<h1 style="text-align: center; font-size: 50px;padding:37px"><span>PLACES  TO  VISIT  IN  CHEMBUR</span></h1>
+
+		<div class="col-container" id="hajiali">
+
+			<div class="col">
+				<h2 style="padding: 0px 10px; text-align: center;">DIAMOND GARDEN</h2>
+				
+				<a href="https://www.google.com/maps/place/Diamond+Garden,+Basant+Garden,+Chembur,+Mumbai,+Maharashtra+400071/@19.0522222,72.9001359,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7c6032f805eed:0x9dd790af607c48f3!8m2!3d19.0523986!4d72.9023211!16s%2Fg%2F11g6bd2418"><img src="{%static 'images/diamond.jpg'%}" alt="DIAMOND GARDEN"></a>
+			</div>
+
+			<div class="col"><br><br>
+				<p style="padding: 40px 20px;">A popular landmark in the city of Mumbai, Diamond Garden is located in the central suburbs of the city. Officially known as Narayan Gajanan Acharya Udyan (named after a freedom fighter), the place is more prominent as the Chembur Garden. The garden is nothing more than a big stretch of green land in the midst of the city. A few stalls serving food can be found inside the park along with a few other hawkers. The place is a very common meeting point for different age groups. Maintained by the City Park Council, the park has a jet which was used during the country's historic 1971 war with Pakistan in the center and also a small temple.</strong>.</p>
+			</div>
+
+		</div>
+
+
+		<div class="col-container" style="background-color: #efefef;">
+
+			<div class="col"><br><br>
+				<p style="padding: 20px 20px;">Fine art, also referred to as “high art,” has long been held up as the highest standard of artistic expression. Fine artists make work that is purely created to be aesthetically pleasing. The aesthetic purpose distinguishes the fine arts from the “low arts” which are traditionally designed for more practical purposes.</p>
+			</div>
+
+			<div class="col" id="jehangir">
+				<h2 style="padding: 0px 10px; text-align: center;">FINE ARTS</h2>
+				<a href="http://ww1.fineartschembur.com/"><img src="{% static 'images/finearts.jpg'%}" alt="FINE ARTS"></a>
+			</div>
+		</div>
+
+		<div class="chemburmap" id="chembur" style="padding-left:10px;">
+			<h2> Map of Chembur Region </h2>
+			{{m |safe}}
+		</div>
+
+		<div class="footer" style="background-color: #343a40; height: 100px"><br>
+			<p class="footer" style="color: white; text-align: center;">Project still in development Phase
+			</p>
+		</div>
+
+
+	{%endblock%}
+

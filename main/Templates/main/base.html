@@ -1,0 +1,75 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		{%load static%}
+		
+		<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/tooltip.css' %}">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Home page for Mumbai" />
+		<meta name="viewport" content="width=device-width, initial-scale=0.55">
+		<meta name="theme-color" content="#303030"/>
+		<link rel="shortcut icon" href="{% static 'images/mumbai.ico'%}" />
+		{%block ref%}{%endblock%}
+		<title>Mumbai Darshan</title>
+		<div class="header" style="position: relative;">
+		<nav class="navbar" id="myTopnav">
+			<ul>
+				<li><a href="about.html"> <i class="material-icons md-18 md-light">developer_mode</i> ABOUT</a></li>
+				{%block link%}<li><a href="#map-container"> <i class="material-icons md-18 md-light">map</i> MAP</a></li>{%endblock%}
+					<li class="dropdown1">
+					<a class="photos"> <i class="material-icons md-18 md-light">location_city</i> MUMBAI</a>
+					<div class="dropdown-content" >
+						<a href="{%url 'history'%}" target="_blank"> <i class="material-icons md-18">event_note</i>  HISTORY</a>
+						<a href="#photos"> <i class="material-icons md-18">photo_library</i>  PHOTOS</a>
+						<a href="tourist.html" target="_blank"> <i class="material-icons md-18">local_activity</i>  TOURIST PLACES</a>
+						<a href="shopping.html" target="_blank"> <i class="material-icons md-18">shopping_cart</i>  SHOPPING</a>
+						<a href="hotels.html" target="_blank"> <i class="material-icons md-18">hotel</i>  HOTELS</a>
+					</div></li>
+				<li><a href="{% url 'home' %}"><i class="material-icons md-18 md-light">home</i>   HOME</a></li>
+				<li class="left"><a href="{%url 'home'%}">MUMBAI</a></li>
+			</ul>
+		</nav>
+		{%block head%}{%endblock%}
+		</div>
+</head>
+<body>
+
+		{%block js%}
+				<script src="{% static 'js/navbar.js' %}"></script>
+		{%endblock%}
+
+		<button onclick="topFunction()" id="myBtn" title="Go to top" >
+			<img src="{% static 'images/arrow.ico' %}" alt="TOP" class="image" style="height:25px;width:auto;">
+		</button>
+		<script>
+		// Get the button:
+		let mybutton = document.getElementById("myBtn");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		  } else {
+			mybutton.style.display = "none";
+		  }
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+		  document.body.scrollTop = 0; // For Safari
+		  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+		}
+		</script>
+		{%block content%}{%endblock%}
+		{%block svg%} {%endblock%}
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+.weather-view {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+}
+
+.weather-info {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+}
+
+.weather-description {
+      font-size: 18px;
+}

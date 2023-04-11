@@ -1,0 +1,86 @@
+{%extends 'main/base.html' %}
+{%block ref%}
+	{%load static%}
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Tourist Places in Mumbai" />
+		<link rel="shortcut icon" href="assets/icons/tourist.ico" />
+		<title>Tourist Places in Mumbai</title>
+		<style>
+			img{
+				padding: 0px;
+				width:250px;
+				height: 250px;
+				border-radius: 6px;
+				box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+			}
+			/* For mobile view of navbar and footer */
+			@media screen and (max-width: 600px) {
+				.navbar {
+					width: 110%;
+				}
+				.footr {
+					width: 110%;
+				}
+			}
+
+		</style>
+{%endblock%}
+
+{%block content%}
+
+
+
+
+	<h1 style="text-align: center; font-size: 50px;"><span>PLACES  TO  VISIT  IN  COLABA</span></h1>
+
+		<div class="col-container" id="hajiali">
+
+			<div class="col">
+				<h2 style="padding: 0px 10px; text-align: center;">GATEWAY OF INDIA</h2>
+				<a href="https://www.google.com/maps?rlz=1C1CHZN_enIN992IN992&sxsrf=AJOqlzV2-ucI9VatpzXeACVt1lzDC0m_zQ:1678643012451&uact=5&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIECCMQJzIECCMQJzIGCAAQChBDMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEOgoIABBHENYEELADSgQIQRgAUOUEWOUEYMcGaAFwAXgAgAGAAYgBgAGSAQMwLjGYAQCgAQHIAQjAAQE&q=gateway+of+india&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjPr-vF-Nb9AhWFX3wKHdhlA-MQ_AUoA3oECAIQBQ"><img src="{%static 'images\gateway-of-india.jpg'%} "alt="GATEWAY OF INDIA"></a>
+			</div>
+
+			<div class="col"><br><br>
+				<p style="padding: 40px 20px;">The Gateway of India is an arch-monument built in the early 20th century in the city of Mumbai (Bombay), India. It was erected to commemorate the landing of King-Emperor George V, the first British monarch to visit India, in December 1911 at Strand Road near Wellington Fountain.
+
+                    The foundation stone was laid in March 1913 for a monument built in the Indo-Islamic style, inspired by elements of 16th-century Gujarati architecture. The final design of the monument by architect George Wittet was sanctioned only in 1914, and construction was completed in 1924. The structure is a memorial arch made of basalt, which is 26 metres (85 feet) high, with an architectural resemblance to a triumphial arch as well as Gujarati architecture of the time.</p>
+			</div>
+		</div>
+
+
+		<div class="col-container" style="background-color: #efefef;">
+
+			<div class="col"><br><br>
+				<p style="padding: 20px 20px;">Established in 1952, Jehangir Art Gallery is more than a prime art exhibition space. Located in South Mumbai, it has been closely associated with the development of contemporary Indian art.
+
+					Jehangir Art Gallery hosts exhibitions by painters,sculptors, print-makers, craftsmen, ceramicists, photographers and weavers. It regularly holds interesting lecture programmes, conducts workshops & discussions on various forms of art, laying stress on education for both the academically inclined and laypersons.
+					
+					Jehangir Art Gallery has provided a platform for aspiring artists,who have always availed the opportunities provided by the gallery to interact with the art fraternity at various levels.The gallery has continued to be a centre of activity for artists, connoisseurs of art, art-lovers and the public.</p>
+			</div>
+
+			<div class="col" id="jehangir">
+				<h2 style="padding: 0px 10px; text-align: center;">JEHANGIR ART GALLERY</h2>
+				<a href="https://jehangirartgallery.com/"><img src="{%static 'images\jehangir-art-gallery.jpg'%}" alt="JEHANGIR ART GALLERY"></a>
+			</div>
+		</div>
+
+		<div class="colabamap" id ="colaba"style="padding-left:10px;">
+			<h2> Map of Colaba Region </h2>
+			{{m |safe}}
+		</div>
+
+		<div class="footr" style="background-color: #343a40; height: 100px"><br>
+			<p class="footer" style="color: white; text-align: center;">Project still in development Phase
+			</p>
+		</div>
+
+
+		<!-- Scroll to Top Button Reference -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<button onclick="scrollToTop()" id="myBtn" title="Go to top">&#x25B2;</button>
+
+{%endblock%}
+{% block link%}<li><a href="#colaba"><i class="material-icons md-18 md-light">map</i> MAP</a></li>{%endblock%}
